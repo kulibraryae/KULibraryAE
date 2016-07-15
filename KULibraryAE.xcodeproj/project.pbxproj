@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CF6BA831D3876F2003BF223 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF6BA821D3876F2003BF223 /* UIKit.framework */; };
 		0CFE21191D372D760050F82C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE21181D372D760050F82C /* AppDelegate.swift */; };
 		0CFE211B1D372D760050F82C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE211A1D372D760050F82C /* FirstViewController.swift */; };
 		0CFE211D1D372D760050F82C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE211C1D372D760050F82C /* SecondViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CF6BA821D3876F2003BF223 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0CFE21151D372D760050F82C /* KULibraryAE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KULibraryAE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CFE21181D372D760050F82C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CFE211A1D372D760050F82C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CF6BA831D3876F2003BF223 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 		0CFE210C1D372D760050F82C = {
 			isa = PBXGroup;
 			children = (
+				0CF6BA821D3876F2003BF223 /* UIKit.framework */,
 				0CFE21171D372D760050F82C /* KULibraryAE */,
 				0CFE21161D372D760050F82C /* Products */,
 			);
@@ -99,7 +103,7 @@
 				TargetAttributes = {
 					0CFE21141D372D760050F82C = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 3BRJULG965;
+						DevelopmentTeam = 4QG3GC35LA;
 					};
 				};
 			};
@@ -256,10 +260,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KULibraryAE/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asd.KULibraryAE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -267,10 +275,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KULibraryAE/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asd.KULibraryAE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -293,6 +305,7 @@
 				0CFE212B1D372D780050F82C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
