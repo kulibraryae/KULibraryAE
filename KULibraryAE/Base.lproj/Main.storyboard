@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A239m" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -12,7 +12,7 @@
         <!--홈-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="KULibraryAE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="PopoverHostScene" customModule="KULibraryAE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -302,6 +302,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="홈" id="1xn-Gd-W20">
                         <barButtonItem key="backBarButtonItem" title="홈" id="eW9-bq-zZt"/>
+                        <barButtonItem key="rightBarButtonItem" image="navi_facebook" id="ZHc-Jg-Hdm">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="t2T-y7-CQ5" kind="popoverPresentation" identifier="popoverSegue" popoverAnchorBarButtonItem="ZHc-Jg-Hdm" id="Lmc-if-etU">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="825"/>
@@ -309,6 +317,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1567" y="-375.5"/>
+        </scene>
+        <!--Web Scene-->
+        <scene sceneID="Snl-yt-un4">
+            <objects>
+                <viewController id="t2T-y7-CQ5" customClass="WebScene" customModule="KULibraryAE" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UZJ-yr-Vls"/>
+                        <viewControllerLayoutGuide type="bottom" id="3ly-dD-spG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B4C-6g-2ip">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="localFile" value="NO"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pageURL" value="www.facebook.com/kulibraryae"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uSt-N5-Wom" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1567" y="-420"/>
         </scene>
         <!--제 4회 옥상영화제-->
         <scene sceneID="1AF-MY-5VF">
@@ -328,15 +359,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UXa-AF-1uo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2362" y="-420"/>
+            <point key="canvasLocation" x="2300" y="-446"/>
         </scene>
         <!--물품대여-->
         <scene sceneID="MWv-Fq-Tsf">
             <objects>
                 <navigationController id="cvW-38-ftm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="물품대여" image="tab_3" id="Sdh-hx-W3A">
-                        <inset key="imageInsets" minX="1" minY="1" maxX="1" maxY="1"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="물품대여" image="tab_3" id="Sdh-hx-W3A"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="83d-CV-QR3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -852,13 +881,12 @@
         <scene sceneID="AIM-ta-J0O">
             <objects>
                 <navigationController id="n0u-NE-UMy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="대관신청" image="tab_4" id="Y9m-kk-8ZP">
-                        <inset key="imageInsets" minX="1" minY="1" maxX="1" maxY="1"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="대관신청" image="tab_4" id="Y9m-kk-8ZP"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GN6-4n-MwM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.92941176469999998" green="0.29411764709999999" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1012,6 +1040,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="HN0-7n-pP7" kind="show" id="HCU-Ph-FYG"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="8fQ-5L-b07" imageView="zd8-Y7-FsX" style="IBUITableViewCellStyleDefault" id="rEg-jp-Cv8">
                                         <rect key="frame" x="0.0" y="429" width="414" height="44"/>
@@ -1047,6 +1078,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9L6-14-v2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1562" y="3434"/>
+        </scene>
+        <!--오시는길-->
+        <scene sceneID="XMZ-lh-lkx">
+            <objects>
+                <viewController id="HN0-7n-pP7" customClass="MapScene" customModule="KULibraryAE" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2x2-Np-QYr"/>
+                        <viewControllerLayoutGuide type="bottom" id="WL8-lU-yUi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XjZ-55-HD1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="오시는길" id="B2U-hR-sYN"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="point" keyPath="mapCenter">
+                            <point key="value" x="37.582422999999999" y="127.027518"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="mapSpan">
+                            <size key="value" width="0.01" height="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lob-uP-lLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2337" y="3434"/>
         </scene>
         <!--대관신청-->
         <scene sceneID="FKX-cj-2Fp">
@@ -1506,7 +1565,7 @@
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1533,9 +1592,7 @@
         <scene sceneID="Ewr-YD-Dda">
             <objects>
                 <navigationController id="MSZ-lc-RwW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="홈" image="tab_1" id="acW-dT-cKf">
-                        <inset key="imageInsets" minX="1" minY="1" maxX="1" maxY="1"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="홈" image="tab_1" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Guk-vj-sdo">
@@ -1564,10 +1621,8 @@
         <!--도서검색-->
         <scene sceneID="wGB-Pb-7O8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OjO-zN-6cw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="도서검색" image="tab_2" id="cPa-gy-q4n">
-                        <inset key="imageInsets" minX="1" minY="1" maxX="1" maxY="1"/>
-                    </tabBarItem>
+                <navigationController id="OjO-zN-6cw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="도서검색" image="tab_2" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0EP-gC-Njs">
@@ -1592,14 +1647,13 @@
         <scene sceneID="dog-gM-ZWo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4fG-Ke-51V" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="더보기" image="tab_5" id="0Pk-n3-c2v">
-                        <inset key="imageInsets" minX="1" minY="1" maxX="1" maxY="1"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="더보기" image="tab_5" id="0Pk-n3-c2v"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZMc-wm-PJ1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.92941176469999998" green="0.29411764709999999" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1617,7 +1671,6 @@
         <!--도서검색-->
         <scene sceneID="8UF-Sh-OXm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lPa-h7-tFK" sceneMemberID="firstResponder"/>
                 <viewController id="zey-eR-3Mx" customClass="SecondViewController" customModule="KULibraryAE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="G6X-Ef-Ftd"/>
@@ -2032,13 +2085,33 @@
                         <outlet property="type_selected" destination="hhM-Rv-DOl" id="sjA-9t-A2g"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lPa-h7-tFK" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1567" y="594"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6D2-MW-u2b">
+            <objects>
+                <viewController id="YOS-mM-ke5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ahr-oW-OI9"/>
+                        <viewControllerLayoutGuide type="bottom" id="lb3-HY-gbn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qzu-UO-tI1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ef-fN-6Yj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2972" y="626"/>
         </scene>
         <!--검색결과(4)-->
         <scene sceneID="xSw-ZX-oyK">
             <objects>
-                <viewController id="xUv-Kx-X2J" customClass="SecondViewController" customModule="KULibraryAE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xUv-Kx-X2J" customClass="PopoverHostScene" customModule="KULibraryAE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VWq-mP-vxV"/>
                         <viewControllerLayoutGuide type="bottom" id="gnS-ml-GLI"/>
@@ -2684,6 +2757,11 @@
                     <navigationItem key="navigationItem" title="검색결과(4)" id="34R-B7-TdK">
                         <barButtonItem key="rightBarButtonItem" image="navi_info" id="byS-G2-M0L">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="YOS-mM-ke5" kind="popoverPresentation" identifier="popoverSegue" popoverAnchorBarButtonItem="byS-G2-M0L" id="Zpe-MZ-pgc">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
@@ -2716,10 +2794,10 @@
         <image name="btn_stamp_society" width="64" height="64"/>
         <image name="btn_table" width="64" height="64"/>
         <image name="btn_table_onclick" width="64" height="64"/>
-        <image name="event_1" width="284" height="283"/>
-        <image name="event_2" width="400" height="400"/>
-        <image name="event_3" width="360" height="270"/>
-        <image name="event_4" width="365" height="480"/>
+        <image name="event_1" width="128" height="128"/>
+        <image name="event_2" width="128" height="128"/>
+        <image name="event_3" width="128" height="100"/>
+        <image name="event_4" width="113" height="128"/>
         <image name="more_asd" width="32" height="32"/>
         <image name="more_asd_highlighted" width="32" height="32"/>
         <image name="more_calendar" width="32" height="32"/>
@@ -2734,13 +2812,14 @@
         <image name="more_people_highlighted" width="32" height="32"/>
         <image name="more_q&amp;a" width="32" height="32"/>
         <image name="more_q&amp;a_highlighted" width="32" height="32"/>
-        <image name="navi_info" width="42" height="42"/>
+        <image name="navi_facebook" width="32" height="32"/>
+        <image name="navi_info" width="32" height="32"/>
         <image name="search" width="451" height="255"/>
-        <image name="tab_1" width="32" height="32"/>
-        <image name="tab_2" width="32" height="32"/>
-        <image name="tab_3" width="32" height="32"/>
-        <image name="tab_4" width="32" height="32"/>
-        <image name="tab_5" width="32" height="32"/>
+        <image name="tab_1" width="29" height="29"/>
+        <image name="tab_2" width="29" height="29"/>
+        <image name="tab_3" width="29" height="29"/>
+        <image name="tab_4" width="29" height="29"/>
+        <image name="tab_5" width="29" height="29"/>
         <image name="test" width="360" height="180"/>
     </resources>
     <color key="tintColor" red="0.92941176470588238" green="0.29411764705882354" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
