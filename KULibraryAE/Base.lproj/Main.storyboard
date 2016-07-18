@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A239m" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -327,11 +327,12 @@
                         <viewControllerLayoutGuide type="bottom" id="3ly-dD-spG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="B4C-6g-2ip">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="100" height="100"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="localFile" value="NO"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageURL" value="www.facebook.com/kulibraryae"/>
@@ -339,12 +340,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uSt-N5-Wom" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1567" y="-391"/>
+            <point key="canvasLocation" x="1941" y="-577"/>
         </scene>
         <!--제 4회 옥상영화제-->
         <scene sceneID="1AF-MY-5VF">
             <objects>
-                <viewController id="KuU-Qz-96w" customClass="PagingScene" customModule="KULibraryAE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KuU-Qz-96w" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c8I-ho-Rze"/>
                         <viewControllerLayoutGuide type="bottom" id="WIl-a1-eBk"/>
@@ -352,17 +353,34 @@
                     <view key="view" contentMode="scaleToFill" id="Vel-tE-5M2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aR2-Pa-byc">
+                                <rect key="frame" x="15" y="79" width="384" height="384"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aR2-Pa-byc" secondAttribute="height" multiplier="1:1" id="fQl-8H-IBN"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="7I5-gH-dUd" kind="embed" id="O1J-Am-hV2"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BnF-Sj-BuF">
+                                <rect key="frame" x="15" y="478" width="384" height="194"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aR2-Pa-byc" secondAttribute="trailing" constant="15" id="DVk-Y3-wPM"/>
+                            <constraint firstItem="BnF-Sj-BuF" firstAttribute="leading" secondItem="aR2-Pa-byc" secondAttribute="leading" id="FkJ-tn-PkS"/>
+                            <constraint firstItem="aR2-Pa-byc" firstAttribute="leading" secondItem="Vel-tE-5M2" secondAttribute="leading" constant="15" id="IvH-Hy-PQY"/>
+                            <constraint firstItem="WIl-a1-eBk" firstAttribute="top" secondItem="BnF-Sj-BuF" secondAttribute="bottom" constant="15" id="Mvu-tj-IOi"/>
+                            <constraint firstItem="BnF-Sj-BuF" firstAttribute="top" secondItem="aR2-Pa-byc" secondAttribute="bottom" constant="15" id="T23-wZ-2XC"/>
+                            <constraint firstItem="aR2-Pa-byc" firstAttribute="top" secondItem="c8I-ho-Rze" secondAttribute="bottom" constant="15" id="TJC-Xt-xQF"/>
+                            <constraint firstItem="BnF-Sj-BuF" firstAttribute="trailing" secondItem="aR2-Pa-byc" secondAttribute="trailing" id="nEc-tY-U4L"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="제 4회 옥상영화제" id="Jw6-pD-xLD"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="pageIndicator" value="NO"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="imageBaseName" value="paging"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="pageSpace">
-                            <integer key="value" value="0"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UXa-AF-1uo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1180,12 +1198,6 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nt2-yk-FkY">
                                                 <rect key="frame" x="103" y="145" width="271" height="25"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대관일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2gE-Kx-tEJ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="52" height="25"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <color key="textColor" red="0.8464969993" green="0.84814876319999999" blue="0.86208587879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="~ " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yPJ-Ar-0YX">
                                                         <rect key="frame" x="137" y="0.0" width="14" height="25"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1199,6 +1211,12 @@
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시작시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8YG-9N-iwg">
                                                         <rect key="frame" x="62" y="0.0" width="70" height="25"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" red="0.8464969993" green="0.84814876319999999" blue="0.86208587879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대관일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2gE-Kx-tEJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="52" height="25"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="textColor" red="0.8464969993" green="0.84814876319999999" blue="0.86208587879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -2776,6 +2794,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21L-9J-iNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2362" y="626"/>
+        </scene>
+        <!--Paging Scene-->
+        <scene sceneID="vgP-fi-SXv">
+            <objects>
+                <viewController id="7I5-gH-dUd" customClass="PagingScene" customModule="KULibraryAE" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="adj-8h-KOO"/>
+                        <viewControllerLayoutGuide type="bottom" id="2DT-R8-VP6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RO8-be-pS9">
+                        <rect key="frame" x="0.0" y="0.0" width="384" height="384"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="imageBaseName" value="paging"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QxV-m1-Eqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2798" y="-517"/>
         </scene>
     </scenes>
     <resources>
