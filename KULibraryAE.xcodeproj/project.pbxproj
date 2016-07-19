@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C3616881D3C693B00415CA7 /* PilotPlant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3616861D3C693B00415CA7 /* PilotPlant.framework */; };
 		0C3616891D3C693B00415CA7 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3616871D3C693B00415CA7 /* UIViewController+Navigation.swift */; };
-		0C36168A1D3C694200415CA7 /* PilotPlant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3616861D3C693B00415CA7 /* PilotPlant.framework */; };
-		0C36168B1D3C694200415CA7 /* PilotPlant.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3616861D3C693B00415CA7 /* PilotPlant.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0CD794101D3E1C2A004C1CEB /* PilotPlant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD794091D3E1B70004C1CEB /* PilotPlant.framework */; };
+		0CD794111D3E1C2A004C1CEB /* PilotPlant.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD794091D3E1B70004C1CEB /* PilotPlant.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0CF6BA831D3876F2003BF223 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF6BA821D3876F2003BF223 /* UIKit.framework */; };
 		0CFE21191D372D760050F82C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE21181D372D760050F82C /* AppDelegate.swift */; };
 		0CFE211B1D372D760050F82C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE211A1D372D760050F82C /* FirstViewController.swift */; };
@@ -23,13 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0C36168C1D3C694200415CA7 /* Embed Frameworks */ = {
+		0CD794121D3E1C2A004C1CEB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0C36168B1D3C694200415CA7 /* PilotPlant.framework in Embed Frameworks */,
+				0CD794111D3E1C2A004C1CEB /* PilotPlant.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,8 +36,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0C3616861D3C693B00415CA7 /* PilotPlant.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PilotPlant.framework; sourceTree = "<group>"; };
 		0C3616871D3C693B00415CA7 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
+		0CD794091D3E1B70004C1CEB /* PilotPlant.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PilotPlant.framework; sourceTree = "<group>"; };
 		0CF6BA821D3876F2003BF223 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0CFE21151D372D760050F82C /* KULibraryAE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KULibraryAE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CFE21181D372D760050F82C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,8 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CF6BA831D3876F2003BF223 /* UIKit.framework in Frameworks */,
-				0C3616881D3C693B00415CA7 /* PilotPlant.framework in Frameworks */,
-				0C36168A1D3C694200415CA7 /* PilotPlant.framework in Frameworks */,
+				0CD794101D3E1C2A004C1CEB /* PilotPlant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +67,7 @@
 		0CFE210C1D372D760050F82C = {
 			isa = PBXGroup;
 			children = (
-				0C3616861D3C693B00415CA7 /* PilotPlant.framework */,
+				0CD794091D3E1B70004C1CEB /* PilotPlant.framework */,
 				0C3616871D3C693B00415CA7 /* UIViewController+Navigation.swift */,
 				0CF6BA821D3876F2003BF223 /* UIKit.framework */,
 				0CFE21171D372D760050F82C /* KULibraryAE */,
@@ -111,7 +109,7 @@
 				0CFE21111D372D760050F82C /* Sources */,
 				0CFE21121D372D760050F82C /* Frameworks */,
 				0CFE21131D372D760050F82C /* Resources */,
-				0C36168C1D3C694200415CA7 /* Embed Frameworks */,
+				0CD794121D3E1C2A004C1CEB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
