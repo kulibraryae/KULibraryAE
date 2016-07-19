@@ -10,7 +10,6 @@ import UIKit
 
 class FourViewController: UIViewController {
     
-    @IBOutlet weak var text_schedule: UILabel!
     @IBOutlet weak var text_name: UITextField!
     @IBOutlet weak var text_phone: UITextField!
     @IBOutlet weak var text_objective: UITextField!
@@ -38,8 +37,6 @@ class FourViewController: UIViewController {
     }
     
     @IBAction func schedule_onclick(sender: AnyObject) {
-        text_schedule.text = "대관가능"
-        text_schedule.textColor = UIColor.init(red: 237/256, green: 74/256, blue: 108/256, alpha: 1)
         text_date.text = "7/20"
         text_date.textColor = UIColor.darkGrayColor()
     }
