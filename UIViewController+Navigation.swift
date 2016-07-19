@@ -184,7 +184,7 @@ public extension UIViewController {
     }
     
     
-    
+    /*
     @IBAction func navigationBack(sender : AnyObject){
         if let navigationCongtroller = self.navigationController {
             navigationController?.popViewControllerAnimated(true)
@@ -195,7 +195,7 @@ public extension UIViewController {
         if let navigationCongtroller = self.navigationController {
             navigationController?.popToRootViewControllerAnimated(true)
         }
-    }
+    }*/
     
     @IBAction func keyboardDismiss(sender: AnyObject) {
         for view in self.view.subviews {
